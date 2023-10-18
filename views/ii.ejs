@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">    
+       <title>List</title>
+</head>
+<body>
+
+  
+    <nav class="nav">
+        <div class="navbar-icons">
+          <a href="/" class="navbar-link"><i class="material-icons-outlined">calendar_month</i>
+            <span class="all">Today</span></a>
+
+            <a href="/work" class="navbar-link"><i class="material-icons-outlined">task</i>
+              <span class="all">Work</span></a>
+
+           
+        </div>
+      </nav>
+      
+    <div class="date-now">
+        <%= currentDateTime  %>  
+    </div>
+    
+    <div class="box">
+      <% newListItems.forEach(item => { %>
+        <form action="/delete" method="post">
+          <div class="item">
+            <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+            <li><%= item.name %></li>
+          </div>
+          <input type="hidden" name="listName" value="<%= currentDateTime %>">
+        </form>
+      <% }); %>
+      
+
+      <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item">
+      <button type="submit" name="list" value="<%= currentDateTime %>" >+</button>
+      </form>
+    </div>
+
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+</html>

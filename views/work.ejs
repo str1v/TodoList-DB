@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Task List</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+   
+  <div class="box">
+    <% for (let i = 0; i < newListItems.length; i++) { %>
+    <div class="item">
+            <input type="checkbox">
+
+             <li><%= newListItems[i].name %></li>
+    </div>
+<% } %>
+        
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+
+</body>
+</html>

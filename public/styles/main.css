@@ -1,0 +1,133 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background-color: #e4e9fd;
+    background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+    min-height: 1000px;
+    font-family: "helvetica neue";
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 40px;
+    background-color: #e4e9fd;
+  }
+  
+  .navbar-icons {
+    display: flex;
+     
+     }
+  
+  .navbar-link {
+    margin-right: 60px;
+    text-decoration: none;
+    color: #a683e3;
+    transition: 2ms ease-in-out;
+      }
+
+    .navbar-link:hover {
+      color: goldenrod;
+    }
+  
+  .navbar-link i {
+    font-size:20px;
+    margin-right: 5px;
+       }
+
+  
+
+  .date-now{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #a683e3;
+    padding: 10px 10px 10px 50px;
+    border-radius: 10px;
+    width: 20%;
+    height: 50px;
+    margin-left: 38%;
+    margin-top: 5%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .h1-work{
+    font-size: 40px;
+    margin-top: -7px;
+    margin-left: 10px;
+    }
+
+  .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 28%;
+    margin-right: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: max-content;
+    margin-bottom: 20px;
+
+  }
+
+  .item{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+   }
+  .item:last-child {
+    border-bottom: 0;
+}
+
+  
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 90%;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #a683e3;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #e4e9fd;
+  color: #fff;
+}
+
+.box li{
+  list-style: none;
+}
+.box input{
+  margin-right: 10px;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
